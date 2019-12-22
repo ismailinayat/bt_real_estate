@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""Django's command-line utility for administrative tasks. This file was created when we ran command "django-admin startproject btre". And this is what we will use from
+    now on to manage our app instead of using "django-admin" which we did used to start our project. We will use "manage.py" for doing things like migrations, running server,
+    creating users etc. """
 import os
 import sys
 
