@@ -1,4 +1,31 @@
 """
+SETTING UP OUR DJANGO PROJECT:
+
+   a) VIRTUAL ENVIRONMENT SETUP:
+
+      Before starting a django project we should create a virtual environment. The reason is that we want to keep the packages and dependancies isolated from global environment and inside of our project.
+      So if we write 'pip3 freeze', it will give us all of the packages installed in the global scope. In order to create a virtual environment we will write following commands:
+
+         If we have both python 3 and python 2 installed then we must specifically declare the version of python that we want to use in our virtual environment. No because we want to use python 3 for our
+         django project we will write following command:
+
+                  python3 -m venv ./venv
+
+         The above command will create a 'venv' directory in our project directory. However we still need to activate our virtual environment after creating it.
+
+                  activate (linux):      "source ./venv/Scripts/activate"
+                  activate (windows):    " ./venv/Scripts/activate.bat "
+
+         Activating our virtual environment will attach '(venv)' at the beginning of our file path in our terminal. Now if we write the 'python --version' command we will see that our python version is 
+         something like 3.7 and that is because this is the version that we used to create our virtual environment. Also now if we write 'pip freeze' there won't be any packages because we just created
+         our virtual environment and haven't installed any packages yet. We can also deactivate the virtual environment by simply writing 'deactivate'.
+
+   b) INSTALLING DJANGO:
+
+         Before installing django we must make sure that we are in our virtual environment by activating it. Once we are in our virtual environment we will write following command to install django:
+
+                                          "pip install django"
+         Now this django framework will be installed only in our virtual environment and if we write 'pip freeze' we will get 'django' and 'pytz' (pytz is a django dependency).
 
 WEB DEVELOPMENT USING DJANGO:
 
@@ -11,6 +38,12 @@ STARTING A NEW PROJECT IN DJANGO:
    We will start our project by running the command "django-admin startproject btre" using our terminal from our project directory. It will create a 'btre' directory and inside it, it will create 3
    python files "setting.py", "urls.py" and "wsgi.py". It will also create "manage.py" file outside this btre directory and inside "btre_project" directory and once we have started our project we
    won't use 'django-admin' any more and we will only use "manage.py" file for everything.
+
+   After creating our django project first thing that we should do is to initialize our 'git repository' by writing 'git init' command in our terminal. Next we will create '.gitignore' file and init we
+   will write the names of files that we don't want to push in our repository and we can get the list of this from 'www.gitignore.io' website. Next we will add and commit the repository into our local
+   repository. We can do that in one line as follow:
+
+                                          'git add . && git commit -m "Initial commit"
 
 WE WANT TO CREATE PAGES APP WHICH CONTAINS A HOME PAGE AND ABOUT PAGE:
 
